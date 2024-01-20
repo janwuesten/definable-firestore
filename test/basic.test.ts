@@ -6,11 +6,11 @@ class Country extends FirestoreDefinable {
   name: string = ""
   code: string = ""
 
-  definition({ useProp }: DefinableDefinition): void {
-    useProp("name")
+  definition({ prop }: DefinableDefinition): void {
+    prop("name")
       .useDeserializer<string>((data) => this.name = data ?? "")
       .useSerializer<string>(() => this.name)
-    useProp("code")
+    prop("code")
       .useDeserializer<string>((data) => this.code = data ?? "")
       .useSerializer<string>(() => this.code)
   }

@@ -1,7 +1,7 @@
 {
   "name": "definable-firestore",
   "author": "Jan Wüsten",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "description": "",
   "main": "lib/index.js",
@@ -33,7 +33,7 @@
     "firestore"
   ],
   "devDependencies": {
-    "definable": "^1.0.1",
+    "definable": "^1.1.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.3.3"
