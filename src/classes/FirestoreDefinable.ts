@@ -4,7 +4,10 @@ import { FirestoreData } from "../interfaces/FirestoreData"
 export abstract class FirestoreDefinable extends Definable {
   documentID: string = ""
 
-  deserializeDoc(doc: FirestoreData, options?: DeserializeOptions) {
+  deserializeDoc(doc: FirestoreData | null | undefined, options?: DeserializeOptions) {
+    if (!doc) {
+      return null
+    }
     if (typeof doc.id != "string") {
       throw new Error("provide firestore document data for deserializeFromDoc")
     }
